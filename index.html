@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ReliefRadar helps you find and rate nearby public restrooms, wherever you are.">
+<title>ReliefRadar</title>
+<style>
+  :root {
+    --bg: #FAFCFF;
+    --surface: #FFFFFF;
+    --text: #1B2430;
+    --text-muted: #5B6472;
+    --accent: #1E90FF;
+    --accent-soft: #EAF4FF;
+    --border: #E2E8F0;
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0B1220;
+      --surface: #121A2A;
+      --text: #E5EAF2;
+      --text-muted: #93A0B4;
+      --accent: #4DA3FF;
+      --accent-soft: #16233A;
+      --border: #24304A;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "SF Pro Text", system-ui, sans-serif;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 64px 24px 80px;
+  }
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 48px 32px 40px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--accent-soft), var(--surface));
+    border: 1px solid var(--border);
+  }
+  .hero .rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 480px;
+    height: 480px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .hero .rings circle {
+    fill: none;
+    stroke: var(--accent);
+    opacity: 0.12;
+  }
+  .brand-mark {
+    width: 88px;
+    height: 88px;
+    position: relative;
+  }
+  h1 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 20px 0 8px;
+    position: relative;
+    text-wrap: balance;
+  }
+  .tagline {
+    font-size: 17px;
+    color: var(--text-muted);
+    margin: 0;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: border-color 0.15s ease;
+  }
+  .links a:hover { border-color: var(--accent); }
+  .links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .links a span.arrow { color: var(--accent); font-weight: 400; }
+
+  footer {
+    text-align: center;
+    margin-top: 48px;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  footer a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero">
+    <svg class="rings" viewBox="0 0 480 480" aria-hidden="true">
+      <circle cx="240" cy="240" r="120"></circle>
+      <circle cx="240" cy="240" r="170"></circle>
+      <circle cx="240" cy="240" r="220"></circle>
+    </svg>
+    <svg class="brand-mark" viewBox="0 0 1024 1024" aria-hidden="true">
+      <defs>
+        <linearGradient id="bmg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#6EB8FF"/><stop offset="100%" stop-color="#1E90FF"/>
+        </linearGradient>
+      </defs>
+      <rect width="1024" height="1024" rx="220" fill="url(#bmg)"/>
+      <path d="M 324,552 A 230,230 0 1 1 700,552 C 660,662 560,782 512,842 C 464,782 364,662 324,552 Z" fill="#FFFFFF"/>
+      <circle cx="512" cy="390" r="72" fill="none" stroke="#0C5CB8" stroke-width="34"/>
+    </svg>
+    <h1>ReliefRadar</h1>
+    <p class="tagline">Find relief when you need it. ReliefRadar helps you find and rate nearby public restrooms — completely free, no account required.</p>
+  </div>
+
+  <div class="links">
+    <a href="privacy-policy.html">Privacy Policy <span class="arrow">&rarr;</span></a>
+    <a href="mailto:relief.radar.app@gmail.com">Contact &amp; Support <span class="arrow">&rarr;</span></a>
+  </div>
+
+  <footer>
+    &copy; 2026 ReliefRadar
+  </footer>
+
+</div>
+</body>
+</html>
